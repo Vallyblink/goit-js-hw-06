@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+ const gallery = document.querySelector(".gallery");
+
+ const imageItem = images.map(({ url, alt }) => 
+  `<li class="picture">
+  <img src="${url}" alt="${alt}" class ="picture--item" >
+  </li>`).join("");
+
+ gallery.insertAdjacentHTML("afterbegin",imageItem)
+
+ gallery.addEventListener( "click", () =>{
+  gallery.style.backgroundColor = "teal"
+ })
+ 
